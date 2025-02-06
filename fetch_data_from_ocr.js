@@ -36,18 +36,16 @@ form.append("user_prompt", JSON.stringify(userPrompt));
 
 // Define the API endpoint and Authorization token
 const url = "https://aura-ai.aurainsure.tech/v1/sme/?document_name=emirates-id";
-// const result =
-//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb21lIjp7ImNsaWVudF9pZCI6MTIzNCwicHJvZHVjdF9pZHMiOls0LDUsNl0sInByb2R1Y3RfbmFtZXMiOlsic21lIiwiaGVhbHRoIiwiYXV0byJdLCJleHAiOjE3Mzg3OTAwNTYuNTM3OTAyfX0.BVa4dynOTUbUsXX2Az4pvqjr_kw59LeZYW4peczK4Qw";
+const token1 =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb21lIjp7ImNsaWVudF9pZCI6MTIzNCwicHJvZHVjdF9pZHMiOls0LDUsNl0sInByb2R1Y3RfbmFtZXMiOlsic21lIiwiaGVhbHRoIiwiYXV0byJdLCJleHAiOjE3Mzg4MTAwODcuNjg0NzM1fX0.e-9QOAsoWIMVVGDRwFddvLr8BfsigHTFGg92Bnwb_I4";
 
-const token1 = token;
-
-console.log(token1);
+// console.log(token1);
 // Perform the POST request using axios
 axios
   .post(url, form, {
     headers: {
       ...form.getHeaders(),
-      Authorization: "Bearer " + token,
+      Authorization: "Bearer " + token1,
       Accept: "application/json",
     },
   })
